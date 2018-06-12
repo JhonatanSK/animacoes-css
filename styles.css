@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    /* background-color: beige; */
+}
+
+div{
+    width: 100%;
+    height: 100vh;
+    animation-name: mudarcorbody;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+img{ 
+    /* margin: 10px; */
+    width: 300px; 
+    /* transition: .5s; */
+    animation-name: animacao; 
+    animation-duration: 1.5s; 
+    /* animation-fill-mode: forwards; */
+    /* animation-direction: alternate-reverse; */
+    animation-iteration-count: infinite; 
+}
+
+/*img:hover{
+    filter: grayscale(80%);
+    box-shadow: 10px 10px 30px black;
+    transform: rotate(360deg) scale(10);
+}*/
+
+@keyframes mover{
+    from{
+        transform: translateY(0) translateX(0);
+    }
+    to{
+        transform: translateY(400px) translateX(550px);
+    }
+}
+@keyframes sombra{
+    from{
+        box-shadow: none;
+        
+    }
+    to{
+        box-shadow: 0 0 0 100px black;
+    }
+}
+h1{
+    font-size: 60px;
+    /* text-align: center; */
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes animacao{
+    from{
+        transform: translateY(0) translateX(1000px);
+    }
+    to{
+        transform: translateY(400px) translateX(0px);
+    }
+}
+
+@keyframes mudarcor{
+    from {
+        color: black;
+    }
+    to{
+        color: white;
+    }
+}
+
+h2{
+    font-size: 75px;
+    text-align: center;
+    animation-name: mudarcor;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes mudarcorbody{
+    0% {
+        background-color: rgb(195, 162, 218);
+    }
+    20%{
+        background-color: rgb(7, 235, 252);
+    }
+    40%{
+        background-color: tomato;
+    }
+    60%{
+        background-color: springgreen;
+    }
+    80%{
+        background-color: sienna;
+    }
+    100%{
+        background-color: salmon;
+    }
+}
